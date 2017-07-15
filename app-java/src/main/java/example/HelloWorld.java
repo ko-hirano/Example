@@ -6,9 +6,9 @@ public class HelloWorld {
     System.out.println("coveredByUnitTest1");
     for (int i=0; i< 10 ;i++) {
     if (i%2==0) {
-    	System.out.println("iは"+ "偶数です(" + i + "")");
+    	System.out.println ( "iは"+ "偶数です(" + i + ")");
     }else{
-    			System.out.println("iは"+ "奇数です(" + i + "")");
+    			System.out.println("iは"+ "奇数です(" + i + ")");
     }
     }
   }

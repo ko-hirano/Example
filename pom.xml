@@ -8,7 +8,7 @@
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
 
-  <name>Example of SonarQube Scanner for Maven + Code Coverage by UT and IT</name>
+  <name>Example of SonarQube Scanner for Maven + Code Coverage by UT and IT2</name>
 
   <modules>
     <module>app-java</module>
