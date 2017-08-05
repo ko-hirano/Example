@@ -5,11 +5,11 @@
     This configuration file was written by the eclipse-cs plugin configuration editor
 -->
 <!--
-    Checkstyle-Configuration:
+    Checkstyle-Configuration: MVNO
     Description: none
 -->
 <module name="Checker">
-  <property name="severity" value="error"/>
+  <property name="severity" value="warning"/>
   <module name="TreeWalker">
     <property name="tabWidth" value="4"/>
     <module name="JavadocMethod">
