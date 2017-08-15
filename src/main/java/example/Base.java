@@ -5,6 +5,9 @@ import java.util.Calendar;
 
 public class Base {
 
+	  public Base() {
+	  }
+
 	  /**
 	   * システム日付に日数を加減算した結果を指定のモードで文字列変換した値を返す。
 	   *
@@ -19,4 +22,5 @@ public class Base {
 	      SimpleDateFormat sdf = new SimpleDateFormat("yyyy/mm/dd");
 	      return sdf.format(calc.getTime());
 	  }
+
 }

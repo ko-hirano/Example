@@ -15,10 +15,6 @@ public class TestDuplications extends Base {
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy/mm/dd");
 	logger.info("今日は" + sdf.format(calc.getTime()) + ")です");
 	logger.info("明日は" + getFormatSystemDate(1) + ")です");
-
   }
-
-
-
 
 }

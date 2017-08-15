@@ -5,8 +5,6 @@ import org.apache.log4j.Logger;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-
-
 public class HelloWorld extends Base {
   Logger logger = Logger.getLogger(Logger.class.getName ());
 
@@ -19,32 +17,25 @@ public class HelloWorld extends Base {
     	    calc.add(Calendar.DATE, i);
 	        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
 			switch (calc.get(Calendar.DAY_OF_WEEK)) {
-			    case Calendar.SUNDAY:     // Calendar.SUNDAY:1 （値。意味はない）
-			        //日曜日
+			    case Calendar.SUNDAY:
 			    	dayOfWeek = "日曜日";
 			        break;
-			    case Calendar.MONDAY:     // Calendar.MONDAY:2
-			        //月曜日
+			    case Calendar.MONDAY:
 			    	dayOfWeek = "月曜日";
 			        break;
-			    case Calendar.TUESDAY:    // Calendar.TUESDAY:3
-			        //火曜日
+			    case Calendar.TUESDAY:
 			    	dayOfWeek = "火曜日";
 			        break;
-			    case Calendar.WEDNESDAY:  // Calendar.WEDNESDAY:4
-			        //水曜日
+			    case Calendar.WEDNESDAY:
 			    	dayOfWeek = "水曜日";
 			        break;
-			    case Calendar.THURSDAY:   // Calendar.THURSDAY:5
-			        //木曜日
+			    case Calendar.THURSDAY:
 			    	dayOfWeek = "木曜日";
 			        break;
-			    case Calendar.FRIDAY:     // Calendar.FRIDAY:6
-			        //金曜日
+			    case Calendar.FRIDAY:
 			    	dayOfWeek = "金曜日";
 			        break;
-			    case Calendar.SATURDAY:   // Calendar.SATURDAY:7
-			        //土曜日
+			    case Calendar.SATURDAY:
 			    	dayOfWeek = "土曜日";
 			        break;
 			}
