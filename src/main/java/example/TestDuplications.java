@@ -12,9 +12,9 @@ public class TestDuplications extends Base {
 
   public void testDuplications() {
     final Calendar calc = Calendar.getInstance();
-    SimpleDateFormat sdf = new SimpleDateFormat("yyyy/mm/dd");
-	logger.info("今日は" + sdf.format(calc.getTime()) + ")です");
-	logger.info("明日は" + getFormatSystemDate(1) + ")です");
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+	logger.info("今日は" + sdf.format(calc.getTime()) + "です");
+	logger.info("明日は" + getFormatSystemDate(1) + "です");
   }
 
 }
