@@ -2,51 +2,37 @@ package example;
 
 import org.apache.log4j.Logger;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 
 
 public class TestDuplications {
   Logger logger = Logger.getLogger(Logger.class.getName ());
 
   public void testDuplications() {
-	logger.info("coveredByUnitTest1開始");
-    for (int i=0; i< 10 ;i++) {
-	if (i%2==0) {
-	logger.info("i(" + i + ")は偶数です");
-	switch(i) {
-	case 2:
-		logger.info( "iは2です");
-	case 4:
-		logger.info( "iは4です");
-	case 6:
-		logger.info( "iは6です");
-	case 8:
-		logger.info( "iは8です");
-	case 10:
-		logger.info( "iは10です");
-	default:
-	}
-	}else{
-	logger.info("i(" + i + ")は奇数です");
-	switch(i) {
-	case 1:
-		logger.info( "iは1です");
-	case 3:
-		logger.info( "iは3です");
-	case 5:
-		logger.info( "iは5です");
-	case 7:
-		logger.info( "iは7です");
-	case 9:
-		logger.info( "iは9です");
-	default:break;
-	}
-	    }
-    }
-	logger.info("coveredByUnitTest1終了");
+    final Calendar calc = Calendar.getInstance();
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy/mm/dd");
+	logger.info("今日は" + sdf.format(calc.getTime()) + ")です");
+	logger.info("明日は" + getFormatSystemDate(1) + ")です");
+
   }
 
-  public void notCovered() {
-    System.out.println("notCovered");
+
+
+  /**
+   * システム日付に日数を加減算した結果を指定のモードで文字列変換した値を返す。
+   *
+   * @param addDay 加算される日数(+で加算,マイナスで減算)
+   * @param mode フォーマット変換モード
+   * @return 結果の日付文字列
+   */
+  public static String getFormatSystemDate(final int addDay) {
+      final Calendar calc = Calendar.getInstance();
+
+      calc.add(Calendar.DATE, addDay);
+      SimpleDateFormat sdf = new SimpleDateFormat("yyyy/mm/dd");
+      return sdf.format(calc.getTime());
   }
 
 }

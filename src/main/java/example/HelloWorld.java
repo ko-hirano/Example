@@ -2,43 +2,59 @@ package example;
 
 import org.apache.log4j.Logger;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 
 
 public class HelloWorld {
-	  private String sample;
+  private String sample;
   Logger logger = Logger.getLogger(Logger.class.getName ());
 
-  public void coveredByUnitTest() {
-		logger.info("coveredByUnitTest1開始");
-    for (int i=0; i< 11 ;i++) {
-	    if (i%2==0) {
-	    	logger.info("i(" + i + ")は偶数です");
-	    	switch(i) {
-	    	case 2:logger.info( "iは2です");
-	    	case 4:logger.info( "iは4です");
-	    	case 6:logger.info( "iは6です");
-	    	case 8:logger.info( "iは8です");
-	    	case 10:logger.info( "iは10です");
-	    	default:break;
-	    	}
-	    }else{
-	    	logger.info("i(" + i + ")は奇数です");
-	    	switch(i) {
-	    	case 1:logger.info( "iは1です");
-	    	case 3:logger.info( "iは3です");
-	    	case 5:logger.info( "iは5です");
-	    	case 7:logger.info( "iは7です");
-	    	case 9:logger.info( "iは9です");
-	    	default:break;
-	    	}
-	    }
+  public void weekdayCalculation() {
+	logger.info("coveredByUnitTest1開始");
+
+    String dayOfWeek = "";
+    for (int i=0; i< 7 ;i++) {
+    	Calendar calc = Calendar.getInstance();
+    	    calc.add(Calendar.DATE, i);
+	        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+
+			switch (calc.get(Calendar.DAY_OF_WEEK)) {
+			    case Calendar.SUNDAY:     // Calendar.SUNDAY:1 （値。意味はない）
+			        //日曜日
+			    	dayOfWeek = "日曜日";
+			        break;
+			    case Calendar.MONDAY:     // Calendar.MONDAY:2
+			        //月曜日
+			    	dayOfWeek = "月曜日";
+			        break;
+			    case Calendar.TUESDAY:    // Calendar.TUESDAY:3
+			        //火曜日
+			    	dayOfWeek = "火曜日";
+			        break;
+			    case Calendar.WEDNESDAY:  // Calendar.WEDNESDAY:4
+			        //水曜日
+			    	dayOfWeek = "水曜日";
+			        break;
+			    case Calendar.THURSDAY:   // Calendar.THURSDAY:5
+			        //木曜日
+			    	dayOfWeek = "木曜日";
+			        break;
+			    case Calendar.FRIDAY:     // Calendar.FRIDAY:6
+			        //金曜日
+			    	dayOfWeek = "金曜日";
+			        break;
+			    case Calendar.SATURDAY:   // Calendar.SATURDAY:7
+			        //土曜日
+			    	dayOfWeek = "土曜日";
+			        break;
+			}
+			sdf.format(calc.getTime());
+			logger.info( sdf.format(calc.getTime()) + "は" + dayOfWeek + "です");
+			System.out.println(sdf.format(calc.getTime()) + "は" + dayOfWeek + "です");
     }
 	logger.info("coveredByUnitTest1終了");
-  }
-
-  public void notCovered() {
-	logger.info("notCovered");
-    System.out.println("notCovered");
   }
 
 }
