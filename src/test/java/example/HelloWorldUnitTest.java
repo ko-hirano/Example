@@ -11,7 +11,7 @@ public class HelloWorldUnitTest {
 
 //  @Test
   public void getWeekday() {
-    new HelloWorld().getDateAndWeekday();
+    new HelloWorld().getWeekday();
   }
   @Test
   public void getDateTest() {
