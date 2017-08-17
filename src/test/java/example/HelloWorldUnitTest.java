@@ -9,10 +9,6 @@ public class HelloWorldUnitTest {
     new HelloWorld().getDateAndWeekday();
   }
 
-//  @Test
-  public void getWeekday() {
-    new HelloWorld().getWeekday();
-  }
   @Test
   public void getDateTest() {
     new HelloWorld().getDate();
