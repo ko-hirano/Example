@@ -5,8 +5,16 @@ import org.junit.Test;
 public class HelloWorldUnitTest {
 
   @Test
-  public void weekdayCalculationTest() {
-    new HelloWorld().weekdayCalculation();
+  public void getDateAndWeekdayTest() {
+    new HelloWorld().getDateAndWeekday();
   }
 
+//  @Test
+  public void getWeekday() {
+    new HelloWorld().getDateAndWeekday();
+  }
+  @Test
+  public void getDateTest() {
+    new HelloWorld().getDate();
+  }
 }
