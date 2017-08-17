@@ -7,9 +7,19 @@ import java.util.Calendar;
 
 
 
+/**
+ *
+ *  重複するクラス
+ *
+ */
 public class TestDuplications extends Base {
   Logger logger = Logger.getLogger(Logger.class.getName ());
 
+/**
+ *
+ *  重複するクラスを使う
+ *
+ */
   public void testDuplications() {
     final Calendar calc = Calendar.getInstance();
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");

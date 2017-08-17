@@ -5,7 +5,14 @@ import java.util.Calendar;
 
 public class Base {
 
+
+	/**
+	 *
+	 *  コンストラクタ
+	 *
+	 */
 	  public Base() {
+		  // 何もしない
 	  }
 
 	  /**
