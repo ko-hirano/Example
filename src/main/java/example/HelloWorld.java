@@ -54,6 +54,10 @@ public class HelloWorld {
 				// 土曜日の場合
 				dayOfWeek = "土曜日";
 				break;
+			default:
+				// 上記以外の場合
+				dayOfWeek = "不明";
+				break;
 			}
 
 			logger.info(sdf.format(calc.getTime()) + "は" + dayOfWeek + "です");
@@ -84,6 +88,19 @@ public class HelloWorld {
 		}
 		logger.info("終了");
 	}
+
+	  /**
+	   * 対象の日付を指定のモードで文字列変換した値を返す。
+	   *
+	   * @param calc 対象の日付
+	   * @param mode フォーマット変換モード
+	   * @return 結果の日付文字列
+	   */
+	  private String getFormatSystemDate(final Calendar calc) {
+
+	      SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+	      return sdf.format(calc.getTime());
+	  }
 
 	  /**
 	   * 対象の日付に日数を加減算した結果を指定のモードで文字列変換した値を返す。
