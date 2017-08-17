@@ -11,7 +11,7 @@ public class Base {
 	 *  コンストラクタ
 	 *
 	 */
-	  public Base() {
+	  Base() {
 		  // 何もしない
 	  }
 
