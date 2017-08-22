@@ -108,7 +108,6 @@ public class HelloWorld {
 	   * @return 結果の日付文字列
 	   */
 	  private String getFormatSystemDate(final Calendar calc , final int addDay) {
-
 	      calc.add(Calendar.DATE, addDay);
 	      return sdf.format(calc.getTime());
 	  }
