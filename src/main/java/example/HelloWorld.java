@@ -60,7 +60,7 @@ public class HelloWorld {
 				break;
 			}
 
-			logger.info(sdf.format(getFormatSystemDate(calc)) + "は" + dayOfWeek + "です");
+			logger.info(getFormatSystemDate(calc) + "は" + dayOfWeek + "です");
 		}
 		logger.info("終了");
 	}
