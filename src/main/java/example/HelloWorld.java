@@ -7,6 +7,8 @@ import java.util.Calendar;
 
 public class HelloWorld {
 	Logger logger = Logger.getLogger(Logger.class.getName());
+	SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+
 	/**
 	 *
 	 *  日付と曜日を表示する
@@ -16,7 +18,6 @@ public class HelloWorld {
 		logger.info("開始");
 
 		// 日付のフォーマット
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
 		String dayOfWeek = "";
 		Calendar calc;
 		for (int i = 0; i < 7; i++) {
@@ -74,7 +75,6 @@ public class HelloWorld {
 	public void getDate() {
 		logger.info("開始");
 
-	    SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
 		// 今日の日付
 		Calendar calc;
 		for (int i = 0; i < 7; i++) {
@@ -82,7 +82,6 @@ public class HelloWorld {
 			calc = Calendar.getInstance();
 			// 今日からi日後を算出
 			logger.info("今日から" + i + "日後は" + getFormatSystemDate(calc, i) + "です");
-//			logger.info("今日から" + i + "日後は" + getFormatSystemDate(calc, i) + "です");
 		}
 		logger.info("終了");
 	}
@@ -96,7 +95,6 @@ public class HelloWorld {
 	   */
 	  private String getFormatSystemDate(final Calendar calc) {
 
-	      SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
 	      return sdf.format(calc.getTime());
 	  }
 
@@ -109,9 +107,7 @@ public class HelloWorld {
 	   * @return 結果の日付文字列
 	   */
 	  private String getFormatSystemDate(final Calendar calc , final int addDay) {
-
-	      SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
 	      calc.add(Calendar.DATE, addDay);
-	      return sdf.format(calc.getTime());
+	      return getFormatSystemDate(calc);
 	  }
 }
